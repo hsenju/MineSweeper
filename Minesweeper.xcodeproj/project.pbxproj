@@ -15,9 +15,8 @@
 		2F9B8F5C19B23C3B00148434 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F5B19B23C3B00148434 /* main.m */; };
 		2F9B8F6019B23C3B00148434 /* HSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F5F19B23C3B00148434 /* HSAppDelegate.m */; };
 		2F9B8F6319B23C3B00148434 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6119B23C3B00148434 /* Main_iPhone.storyboard */; };
-		2F9B8F6619B23C3B00148434 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6419B23C3B00148434 /* Main_iPad.storyboard */; };
 		2F9B8F6919B23C3B00148434 /* HSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6819B23C3B00148434 /* HSViewController.m */; };
-		2F9B8F6C19B23C3B00148434 /* HSMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6B19B23C3B00148434 /* HSMyScene.m */; };
+		2F9B8F6C19B23C3B00148434 /* HSScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6B19B23C3B00148434 /* HSScene.m */; };
 		2F9B8F6E19B23C3B00148434 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6D19B23C3B00148434 /* Spaceship.png */; };
 		2F9B8F7019B23C3B00148434 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B8F6F19B23C3B00148434 /* Images.xcassets */; };
 		2F9B8F7719B23C3B00148434 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9B8F7619B23C3B00148434 /* XCTest.framework */; };
@@ -25,6 +24,12 @@
 		2F9B8F7919B23C3B00148434 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F9B8F5119B23C3B00148434 /* UIKit.framework */; };
 		2F9B8F8119B23C3B00148434 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2F9B8F7F19B23C3B00148434 /* InfoPlist.strings */; };
 		2F9B8F8319B23C3B00148434 /* MinesweeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F8219B23C3B00148434 /* MinesweeperTests.m */; };
+		2F9B8F8E19B2408C00148434 /* HSGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F8D19B2408C00148434 /* HSGridView.m */; };
+		2F9B8F9119B2410200148434 /* HSGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F9019B2410200148434 /* HSGrid.m */; };
+		2F9B8F9419B242B900148434 /* HSGlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F9319B242B900148434 /* HSGlobalState.m */; };
+		2F9B8F9819B2495900148434 /* HSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F9719B2495900148434 /* HSCell.m */; };
+		2F9B8F9B19B254AE00148434 /* HSGameManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8F9A19B254AE00148434 /* HSGameManager.m */; };
+		2F9B8FA319B26B6100148434 /* HSTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9B8FA219B26B6100148434 /* HSTile.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,11 +55,10 @@
 		2F9B8F5E19B23C3B00148434 /* HSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSAppDelegate.h; sourceTree = "<group>"; };
 		2F9B8F5F19B23C3B00148434 /* HSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSAppDelegate.m; sourceTree = "<group>"; };
 		2F9B8F6219B23C3B00148434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		2F9B8F6519B23C3B00148434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		2F9B8F6719B23C3B00148434 /* HSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSViewController.h; sourceTree = "<group>"; };
 		2F9B8F6819B23C3B00148434 /* HSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSViewController.m; sourceTree = "<group>"; };
-		2F9B8F6A19B23C3B00148434 /* HSMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSMyScene.h; sourceTree = "<group>"; };
-		2F9B8F6B19B23C3B00148434 /* HSMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSMyScene.m; sourceTree = "<group>"; };
+		2F9B8F6A19B23C3B00148434 /* HSScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSScene.h; sourceTree = "<group>"; };
+		2F9B8F6B19B23C3B00148434 /* HSScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HSScene.m; sourceTree = "<group>"; };
 		2F9B8F6D19B23C3B00148434 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		2F9B8F6F19B23C3B00148434 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2F9B8F7519B23C3B00148434 /* MinesweeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinesweeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +66,19 @@
 		2F9B8F7E19B23C3B00148434 /* MinesweeperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MinesweeperTests-Info.plist"; sourceTree = "<group>"; };
 		2F9B8F8019B23C3B00148434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2F9B8F8219B23C3B00148434 /* MinesweeperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinesweeperTests.m; sourceTree = "<group>"; };
+		2F9B8F8C19B2408C00148434 /* HSGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGridView.h; sourceTree = "<group>"; };
+		2F9B8F8D19B2408C00148434 /* HSGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGridView.m; sourceTree = "<group>"; };
+		2F9B8F8F19B2410200148434 /* HSGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGrid.h; sourceTree = "<group>"; };
+		2F9B8F9019B2410200148434 /* HSGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGrid.m; sourceTree = "<group>"; };
+		2F9B8F9219B242B900148434 /* HSGlobalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGlobalState.h; sourceTree = "<group>"; };
+		2F9B8F9319B242B900148434 /* HSGlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGlobalState.m; sourceTree = "<group>"; };
+		2F9B8F9519B243A700148434 /* HSPosition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HSPosition.h; sourceTree = "<group>"; };
+		2F9B8F9619B2495900148434 /* HSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSCell.h; sourceTree = "<group>"; };
+		2F9B8F9719B2495900148434 /* HSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSCell.m; sourceTree = "<group>"; };
+		2F9B8F9919B254AE00148434 /* HSGameManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSGameManager.h; sourceTree = "<group>"; };
+		2F9B8F9A19B254AE00148434 /* HSGameManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSGameManager.m; sourceTree = "<group>"; };
+		2F9B8FA119B26B6100148434 /* HSTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTile.h; sourceTree = "<group>"; };
+		2F9B8FA219B26B6100148434 /* HSTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTile.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +143,11 @@
 				2F9B8F5E19B23C3B00148434 /* HSAppDelegate.h */,
 				2F9B8F5F19B23C3B00148434 /* HSAppDelegate.m */,
 				2F9B8F6119B23C3B00148434 /* Main_iPhone.storyboard */,
-				2F9B8F6419B23C3B00148434 /* Main_iPad.storyboard */,
-				2F9B8F6719B23C3B00148434 /* HSViewController.h */,
-				2F9B8F6819B23C3B00148434 /* HSViewController.m */,
-				2F9B8F6A19B23C3B00148434 /* HSMyScene.h */,
-				2F9B8F6B19B23C3B00148434 /* HSMyScene.m */,
+				2F9B8F9F19B26ADE00148434 /* Controller */,
+				2F9B8F9E19B26ABF00148434 /* State */,
+				2F9B8F9D19B26AA500148434 /* Global */,
+				2F9B8F9C19B26A7500148434 /* SpriteKit */,
+				2F9B8FA019B26B0500148434 /* View */,
 				2F9B8F6D19B23C3B00148434 /* Spaceship.png */,
 				2F9B8F6F19B23C3B00148434 /* Images.xcassets */,
 				2F9B8F5619B23C3B00148434 /* Supporting Files */,
@@ -165,6 +182,58 @@
 				2F9B8F7F19B23C3B00148434 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2F9B8F9C19B26A7500148434 /* SpriteKit */ = {
+			isa = PBXGroup;
+			children = (
+				2F9B8F8F19B2410200148434 /* HSGrid.h */,
+				2F9B8F9019B2410200148434 /* HSGrid.m */,
+				2F9B8FA119B26B6100148434 /* HSTile.h */,
+				2F9B8FA219B26B6100148434 /* HSTile.m */,
+				2F9B8F9619B2495900148434 /* HSCell.h */,
+				2F9B8F9719B2495900148434 /* HSCell.m */,
+				2F9B8F6A19B23C3B00148434 /* HSScene.h */,
+				2F9B8F6B19B23C3B00148434 /* HSScene.m */,
+			);
+			name = SpriteKit;
+			sourceTree = "<group>";
+		};
+		2F9B8F9D19B26AA500148434 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				2F9B8F9219B242B900148434 /* HSGlobalState.h */,
+				2F9B8F9319B242B900148434 /* HSGlobalState.m */,
+				2F9B8F9519B243A700148434 /* HSPosition.h */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		2F9B8F9E19B26ABF00148434 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				2F9B8F9919B254AE00148434 /* HSGameManager.h */,
+				2F9B8F9A19B254AE00148434 /* HSGameManager.m */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		2F9B8F9F19B26ADE00148434 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2F9B8F6719B23C3B00148434 /* HSViewController.h */,
+				2F9B8F6819B23C3B00148434 /* HSViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2F9B8FA019B26B0500148434 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2F9B8F8C19B2408C00148434 /* HSGridView.h */,
+				2F9B8F8D19B2408C00148434 /* HSGridView.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,7 +315,6 @@
 			files = (
 				2F9B8F6E19B23C3B00148434 /* Spaceship.png in Resources */,
 				2F9B8F7019B23C3B00148434 /* Images.xcassets in Resources */,
-				2F9B8F6619B23C3B00148434 /* Main_iPad.storyboard in Resources */,
 				2F9B8F6319B23C3B00148434 /* Main_iPhone.storyboard in Resources */,
 				2F9B8F5A19B23C3B00148434 /* InfoPlist.strings in Resources */,
 			);
@@ -267,10 +335,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F9B8F9419B242B900148434 /* HSGlobalState.m in Sources */,
 				2F9B8F6919B23C3B00148434 /* HSViewController.m in Sources */,
-				2F9B8F6C19B23C3B00148434 /* HSMyScene.m in Sources */,
+				2F9B8FA319B26B6100148434 /* HSTile.m in Sources */,
+				2F9B8F6C19B23C3B00148434 /* HSScene.m in Sources */,
 				2F9B8F5C19B23C3B00148434 /* main.m in Sources */,
 				2F9B8F6019B23C3B00148434 /* HSAppDelegate.m in Sources */,
+				2F9B8F9119B2410200148434 /* HSGrid.m in Sources */,
+				2F9B8F9819B2495900148434 /* HSCell.m in Sources */,
+				2F9B8F8E19B2408C00148434 /* HSGridView.m in Sources */,
+				2F9B8F9B19B254AE00148434 /* HSGameManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,14 +381,6 @@
 				2F9B8F6219B23C3B00148434 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		2F9B8F6419B23C3B00148434 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2F9B8F6519B23C3B00148434 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		2F9B8F7F19B23C3B00148434 /* InfoPlist.strings */ = {

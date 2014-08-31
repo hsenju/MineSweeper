@@ -10,5 +10,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface HSViewController : UIViewController
+- (void)updateScore:(NSInteger)score;
 
+- (void)endGame:(BOOL)won;
 @end

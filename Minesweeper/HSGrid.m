@@ -20,14 +20,13 @@
 
 
 @implementation HSGrid {
-    /* The 2-D grid that keeps track of all cells and tiles. */
     NSMutableArray *_grid;
+    BOOL success;
 }
 
 - (instancetype)initWithDimension:(NSInteger)dimension
 {
     if (self = [super init]) {
-        // Set up the grid with all empty cells.
         _grid = [[NSMutableArray alloc] initWithCapacity:dimension];
         
         for (NSInteger i = 0; i < dimension; i++) {
@@ -38,10 +37,7 @@
             [_grid addObject:array];
         }
         
-        // Record the dimension of the grid.
         self.dimension = dimension;
-        
-        // Draw the board.
     }
     
     return self;
@@ -92,12 +88,6 @@
     return [self availableCells].count != 0;
 }
 
-
-/**
- * Returns a randomly chosen cell that's available.
- *
- * @return A randomly chosen available cell, or nil if no cell is available.
- */
 - (HSCell *)randomAvailableCell
 {
     NSArray *availableCells = [self availableCells];
@@ -107,12 +97,6 @@
     return nil;
 }
 
-
-/**
- * Returns all available cells in an array.
- *
- * @return The array of all available cells. If no cell is available, returns empty array.
- */
 - (NSArray *)availableCells
 {
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:self.dimension * self.dimension];
@@ -131,10 +115,10 @@
     if (cell) {
         HSTile *instance = [[HSTile alloc] init];
         [instance setGrid:self];
-        NSLog(@"grid: %ld", (long)self.dimension);
-        HSTile *tile = [instance insertNewTileToCell:cell grid:self];
+        HSTile *tile = [instance insertNewTileToCell:cell];
         [self.scene addChild:tile];
         instance = nil;
+        
         
         SKAction *delayAction = delay ? [SKAction waitForDuration:GSTATE.animationDuration * 3] :
         [SKAction waitForDuration:0];
@@ -145,6 +129,75 @@
     }
 }
 
+- (void)insertTileAtPoint:(HSPosition)location grid:(HSGrid *)grid{
+    HSCell *cell = [grid cellAtPosition:location];
+    if (cell) {
+        HSTile *tile = cell.tile;//[grid tileAtPosition:location];//[instance insertNewTileToCell:cell];
+        if (!tile.parent) {
+            [self.scene addChild:tile];
+            CGPoint origin = [GSTATE locationOfPosition:cell.position];
+            tile.position = CGPointMake(origin.x + GSTATE.tileSize / 2, origin.y + GSTATE.tileSize / 2);
+            [tile setScale:0];
+            
+            if (tile.zero){
+                [grid forEach:^(HSPosition position) {
+                    if ((cell == [grid cellAtPosition:position])) {
+                        
+                        HSTile *t1 = [grid tileAtPosition:HSPositionMake(position.x + 1, position.y)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t1.position] grid:grid];
+                        HSTile *t2 = [grid tileAtPosition:HSPositionMake(position.x - 1, position.y)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t2.position] grid:grid];
+                        HSTile *t3 = [grid tileAtPosition:HSPositionMake(position.x, position.y + 1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t3.position] grid:grid];
+                        HSTile *t4 = [grid tileAtPosition:HSPositionMake(position.x, position.y - 1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t4.position] grid:grid];
+                        HSTile *t5 = [grid tileAtPosition:HSPositionMake(position.x + 1, position.y + 1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t5.position] grid:grid];
+                        HSTile *t6 = [grid tileAtPosition:HSPositionMake(position.x - 1, position.y -1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t6.position] grid:grid];
+                        HSTile *t7 = [grid tileAtPosition:HSPositionMake(position.x -1, position.y + 1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t7.position] grid:grid];
+                        HSTile *t8 = [grid tileAtPosition:HSPositionMake(position.x + 1, position.y - 1)];
+                        [self insertTileAtPoint:[GSTATE pointToPosition:t8.position] grid:grid];
+                        
+                    }
+                } reverseOrder:TRUE];
+            }
+
+            if (tile.mine){
+                [grid forEach:^(HSPosition position) {
+                    if ([grid tileAtPosition:position].mine) {
+                        [self insertTileAtPoint:position grid:grid];
+                    }
+                } reverseOrder:TRUE];
+                success = false;
+            }
+            
+            SKAction *delayAction = [SKAction waitForDuration:GSTATE.animationDuration * 3];
+            SKAction *scale = [SKAction scaleTo:1 duration:GSTATE.animationDuration];
+            [tile runAction:[SKAction sequence:@[delayAction, [SKAction group:@[scale]]]]];
+        }
+    }
+}
+
+-(void)gridcheat: (HSGrid*)grid{
+    [grid forEach:^(HSPosition position) {
+        if ([grid tileAtPosition:position].mine) {
+            [self insertTileAtPoint:position grid:grid];
+        }
+    } reverseOrder:TRUE];
+}
+
+- (void)resetGameBool{
+    success = true;
+}
+
+- (BOOL)gridvalidate{
+//    [ forEach:^(HSPosition position) {
+//    
+//    }];
+    return success;
+}
 
 - (void)removeAllTilesAnimated:(BOOL)animated
 {

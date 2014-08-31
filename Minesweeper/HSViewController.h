@@ -10,7 +10,8 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface HSViewController : UIViewController
-- (void)updateScore:(NSInteger)score;
-
-- (void)endGame:(BOOL)won;
+@property (weak, nonatomic) IBOutlet UILabel *minesweeperLabel;
+@property (weak, nonatomic) IBOutlet UIButton *theNewGameButton;
+@property (weak, nonatomic) IBOutlet UIButton *validateButton;
+@property (weak, nonatomic) IBOutlet UIButton *cheatButton;
 @end

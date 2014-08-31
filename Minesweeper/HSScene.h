@@ -18,5 +18,7 @@
 - (void)startNewGame;
 
 - (void)loadBoardWithGrid:(HSGrid *)grid;
+- (void)scenecheat;
+- (BOOL)validate;
 
 @end

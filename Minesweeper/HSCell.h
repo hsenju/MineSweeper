@@ -12,17 +12,10 @@
 
 @interface HSCell : NSObject
 
-/** The position of the cell. */
 @property (nonatomic) HSPosition position;
 
-/** The tile in the cell, if any. */
 @property (nonatomic, strong) HSTile *tile;
 
-/**
- * Initialize a M2Cell at the specified position with no tile in it.
- *
- * @param position The position of the cell.
- */
 - (instancetype)initWithPosition:(HSPosition)position;
 
 @end

@@ -32,5 +32,13 @@ typedef void (^IteratorBlock)(HSPosition);
 
 - (void)insertTileAtRandomAvailablePositionWithDelay:(BOOL)delay;
 
+- (void)insertTileAtPoint:(HSPosition)location grid:(HSGrid *)grid;
+
 - (void)removeAllTilesAnimated:(BOOL)animated;
+
+- (void)gridcheat: (HSGrid*)grid;
+
+- (BOOL)gridvalidate;
+
+- (void)resetGameBool;
 @end

@@ -18,7 +18,6 @@
 @property (nonatomic, readwrite) NSInteger horizontalOffset;
 @property (nonatomic, readwrite) NSInteger verticalOffset;
 @property (nonatomic, readwrite) NSTimeInterval animationDuration;
-@property (nonatomic) NSInteger theme;
 
 @end
 

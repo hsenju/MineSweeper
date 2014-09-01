@@ -14,6 +14,4 @@
 
 + (UIImage *)gridImageWithGrid:(HSGrid *)grid;
 
-+ (UIImage *)gridImageWithOverlay;
-
 @end

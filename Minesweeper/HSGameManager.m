@@ -18,6 +18,9 @@
     HSGrid *_grid;
     
     HSGrid *answerGrid;
+    
+    NSInteger offset;
+
 }
 
 
@@ -46,14 +49,17 @@
     }
     
     [Settings setValue:@"YES" forKey:@"Mine"];
-    for (int i = 0; i<11; i++){
+    for (int i = 0; i<10; i++){
         [answerGrid insertTileAtRandomAvailablePositionWithDelay:NO];
     }
     [Settings setValue:@"NO" forKey:@"Mine"];
-    for (int i = 0; i<55; i++){
+    for (int i = 0; i<56; i++){
         [answerGrid insertTileAtRandomAvailablePositionWithDelay:NO];
     }
+    
+    offset = [[scene children] count];
 }
+
 
 - (void)touchedScreen:(CGPoint)location{
     HSPosition point = [GSTATE pointToPosition:location];
@@ -65,7 +71,7 @@
 }
 
 - (BOOL)managervalidate{
-    return [_grid gridvalidate];
+    return [_grid gridvalidate: _grid offset: offset];
 }
 
 @end

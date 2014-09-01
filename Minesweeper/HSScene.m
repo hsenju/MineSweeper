@@ -40,6 +40,8 @@
 
 - (void)startNewGame
 {
+
+    
    [_manager startNewSessionWithScene:self];
 }
 

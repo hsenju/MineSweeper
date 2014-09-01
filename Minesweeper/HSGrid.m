@@ -119,7 +119,6 @@
         [self.scene addChild:tile];
         instance = nil;
         
-        
         SKAction *delayAction = delay ? [SKAction waitForDuration:GSTATE.animationDuration * 3] :
         [SKAction waitForDuration:0];
         SKAction *move = [SKAction moveBy:CGVectorMake(- GSTATE.tileSize / 2, - GSTATE.tileSize / 2)
@@ -132,7 +131,11 @@
 - (void)insertTileAtPoint:(HSPosition)location grid:(HSGrid *)grid{
     HSCell *cell = [grid cellAtPosition:location];
     if (cell) {
-        HSTile *tile = cell.tile;//[grid tileAtPosition:location];//[instance insertNewTileToCell:cell];
+        HSTile *tile = cell.tile;
+//        uncomment this to cheat to check if its all working
+        if (tile.mine){
+            return;
+        }
         if (!tile.parent) {
             [self.scene addChild:tile];
             CGPoint origin = [GSTATE locationOfPosition:cell.position];
@@ -192,11 +195,8 @@
     success = true;
 }
 
-- (BOOL)gridvalidate{
-//    [ forEach:^(HSPosition position) {
-//    
-//    }];
-    return success;
+- (BOOL)gridvalidate:(HSGrid *)grid offset:(NSInteger)offset{
+    return (success && [[self.scene children] count] - offset == 54);
 }
 
 - (void)removeAllTilesAnimated:(BOOL)animated

@@ -67,7 +67,6 @@
 
 - (void)refreshValue
 {
-    long value = 0;
     if ([[Settings valueForKey:@"Mine"]  isEqual: @"YES"]){
         _value.text = [NSString stringWithFormat:@"M"];
         
@@ -123,8 +122,6 @@
             if (t7 && t7.mine)counter ++;
             HSTile *t8 = [grid tileAtPosition:HSPositionMake(position.x + 1, position.y - 1)];
             if (t8 && t8.mine)counter ++;
-            
-            if (t1 || t2 || t3 || t4 || t5 || t6 || t7) NSLog(@"found mine");
             
             _value.text = [NSString stringWithFormat:@"%d", counter];
             [tile addChild:_value];

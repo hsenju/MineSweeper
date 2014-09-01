@@ -56,21 +56,6 @@
     return [HSGridView snapshotWithView:backgroundView];
 }
 
-
-+ (UIImage *)gridImageWithOverlay
-{
-    UIView *backgroundView = [[UIView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    backgroundView.backgroundColor = [UIColor clearColor];
-    backgroundView.opaque = NO;
-    
-    HSGridView *view = [[HSGridView alloc] init];
-    view.backgroundColor = [[UIColor colorWithRed:0.741 green:0.286 blue:0.263 alpha:1] colorWithAlphaComponent:0.8];
-    [backgroundView addSubview:view];
-    
-    return [HSGridView snapshotWithView:backgroundView];
-}
-
-
 + (UIImage *)snapshotWithView:(UIView *)view
 {
     UIGraphicsBeginImageContextWithOptions(view.frame.size, view.opaque, 0.0);

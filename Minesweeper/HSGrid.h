@@ -38,7 +38,7 @@ typedef void (^IteratorBlock)(HSPosition);
 
 - (void)gridcheat: (HSGrid*)grid;
 
-- (BOOL)gridvalidate;
+- (BOOL)gridvalidate:(HSGrid*)grid offset:(NSInteger)offset;
 
 - (void)resetGameBool;
 @end

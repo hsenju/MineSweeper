@@ -133,9 +133,9 @@
     if (cell) {
         HSTile *tile = cell.tile;
 //        uncomment this to cheat to check if its all working
-        if (tile.mine){
-            return;
-        }
+//        if (tile.mine){
+//            return;
+//        }
         if (!tile.parent) {
             [self.scene addChild:tile];
             CGPoint origin = [GSTATE locationOfPosition:cell.position];

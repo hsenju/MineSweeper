@@ -13,11 +13,11 @@
                         <viewControllerLayoutGuide type="bottom" id="aVg-JY-jeM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bdc-N1-crn" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RZL-pY-hjA">
-                                <rect key="frame" x="20" y="86" width="93" height="30"/>
+                                <rect key="frame" x="20" y="105" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="New Game">
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDN-mK-1tM">
-                                <rect key="frame" x="121" y="86" width="80" height="30"/>
+                                <rect key="frame" x="121" y="105" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Validate">
@@ -51,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chg-4V-b0V">
-                                <rect key="frame" x="208" y="86" width="94" height="30"/>
+                                <rect key="frame" x="208" y="105" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.33000000000000002" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Cheat">
@@ -65,20 +65,19 @@
                                     <action selector="cheatPressed:" destination="LVB-YS-i5n" eventType="touchUpInside" id="Lm9-zl-Lki"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Minesweeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KA8-OE-VQF">
-                                <rect key="frame" x="86" y="57" width="149" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Minesweeper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KA8-OE-VQF">
+                                <rect key="frame" x="75" y="57" width="171" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Superclarendon-Light" family="Superclarendon" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KA8-OE-VQF" secondAttribute="centerX" id="2yN-IS-whE"/>
                             <constraint firstItem="sDN-mK-1tM" firstAttribute="leading" secondItem="RZL-pY-hjA" secondAttribute="trailing" constant="8" id="LGl-de-n4X"/>
-                            <constraint firstItem="RZL-pY-hjA" firstAttribute="leading" secondItem="bdc-N1-crn" secondAttribute="leading" constant="20" id="b1t-ak-Orx"/>
-                            <constraint firstItem="chg-4V-b0V" firstAttribute="leading" secondItem="sDN-mK-1tM" secondAttribute="trailing" constant="7" id="cHD-4b-WEQ"/>
+                            <constraint firstAttribute="centerX" secondItem="KA8-OE-VQF" secondAttribute="centerX" id="MB7-lX-Y7k"/>
+                            <constraint firstItem="chg-4V-b0V" firstAttribute="leading" secondItem="sDN-mK-1tM" secondAttribute="trailing" constant="7" id="vrE-Bm-Py5"/>
                         </constraints>
                     </view>
                     <connections>
@@ -95,6 +94,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
